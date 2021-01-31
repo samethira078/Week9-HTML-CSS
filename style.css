@@ -1,10 +1,36 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.15fr 0.6fr 1.3fr 1.9fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "TOP TOP TOP"
+      "LOGO MENU MENU"
+      "HEADER HEADER HEADER"
+      "CONTENT CONTENT CONTENT"
+      "footer footer footer";
+}
+.top{
+    grid-area: TOP;
+    background-color: yellow;
+}
+.logo{
+    grid-area: LOGO;
 }
 nav{
-    display: flex;
-    background-color: aqua;
-    height: 7.5vh;
-    width: 100%;
+    grid-area: MENU;
+}
+header{
+    grid-area: HEADER;
+}
+.content{
+    grid-area: CONTENT;
+}
+footer{
+    grid-area: FOOTER;
 }
